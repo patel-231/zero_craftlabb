@@ -1,12 +1,12 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js";
 import { OBJLoader } from "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/loaders/OBJLoader.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-import { getFirestore, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
 import { firebaseConfig } from "./firebase-config.js";
 
 const PRODUCT_PRICE = 50;
 const firebaseApp = initializeApp(firebaseConfig);
-const db = getFirestore(firebaseApp);
+const db = getDatabase(firebaseApp);
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -157,13 +157,20 @@ setup3D("product-model");
 
 async function loadStock() {
   try {
-    const productRef = doc(db, "products", "batman-cap");
-    onSnapshot(productRef, (snapshot) => {
+    const productRef = ref(db, "products/batman-cap");
+
+    onValue(productRef, (snapshot) => {
       if (!snapshot.exists()) return;
-      stock = Number(snapshot.data().stock ?? 50);
+
+      stock = Number(snapshot.val().stock ?? 50);
+
       $("#stock-count").textContent = stock;
-      $("#stock-label").textContent = stock <= 0 ? "SOLD OUT" : `${stock} LEFT`;
-      $("#stock-bar-fill").style.width = `${Math.max(0, Math.min(100, (stock / 50) * 100))}%`;
+      $("#stock-label").textContent =
+        stock <= 0 ? "SOLD OUT" : `${stock} LEFT`;
+
+      $("#stock-bar-fill").style.width =
+        `${Math.max(0, Math.min(100, (stock / 50) * 100))}%`;
+
       $("#open-checkout").disabled = stock <= 0;
       $("#open-checkout-2").disabled = stock <= 0;
     });
@@ -171,7 +178,7 @@ async function loadStock() {
     console.warn("Stock listener unavailable. Using default stock.", error);
   }
 }
-loadStock();
+
 
 $("#checkout-form").addEventListener("submit", async (event) => {
   event.preventDefault();
