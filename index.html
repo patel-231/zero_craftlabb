@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ZERO_CRAFTLABB — Wear the symbol. Batman-inspired limited drop cap." />
+  <title>ZERO_CRAFTLABB — Wear The Symbol</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="cursor-glow"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ZERO_CRAFTLABB home">ZERO<span>_</span>CRAFTLABB</a>
+    <nav>
+      <a href="#product">Product</a>
+      <a href="#story">Story</a>
+      <a href="#drop">The Drop</a>
+    </nav>
+    <a class="header-buy" href="#product">BUY CAP <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">ZERO_CRAFTLABB / DROP 001</p>
+        <h1>WEAR<br /><span>THE SYMBOL.</span></h1>
+        <p class="hero-description">A dark statement piece for the ones who move differently. No cape required.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#product">CLAIM THE DROP <span>↗</span></a>
+          <a class="text-link" href="#story">DISCOVER THE STORY ↓</a>
+        </div>
+      </div>
+
+      <div class="hero-model-wrap">
+        <div class="model-orbit"></div>
+        <div id="hero-model" class="model-stage" aria-label="Interactive 3D cap model"></div>
+        <div class="model-label model-label-top">OBJ / 001</div>
+        <div class="model-label model-label-bottom">DRAG TO ROTATE</div>
+      </div>
+
+      <div class="hero-side-note">FOR THE<br />NIGHT MOVERS</div>
+    </section>
+
+    <section class="ticker" aria-label="Product message">
+      <div>LIMITED DROP</div><span>✦</span><div>ZERO_CRAFTLABB</div><span>✦</span><div>WEAR THE SYMBOL</div><span>✦</span><div>LIMITED DROP</div><span>✦</span>
+    </section>
+
+    <section id="product" class="product-section section-pad">
+      <div class="section-heading">
+        <p class="eyebrow">01 / THE PRODUCT</p>
+        <h2>THE CAP<br /><em>AFTER DARK.</em></h2>
+      </div>
+
+      <div class="product-layout">
+        <div class="gallery">
+          <div class="main-image-wrap">
+            <img id="main-product-image" src="assets/product/cap-front.jpg" alt="Batman-inspired cap front view" />
+            <div class="image-index"><span id="image-number">01</span> / 04</div>
+          </div>
+          <div class="thumbnail-row">
+            <button class="thumbnail active" data-image="assets/product/cap-front.jpg" data-number="01"><img src="assets/product/cap-front.jpg" alt="Cap front" /></button>
+            <button class="thumbnail" data-image="assets/product/cap-back.jpg" data-number="02"><img src="assets/product/cap-back.jpg" alt="Cap back" /></button>
+            <button class="thumbnail" data-image="assets/product/cap-top.jpg" data-number="03"><img src="assets/product/cap-top.jpg" alt="Cap top" /></button>
+            <button class="thumbnail" data-image="assets/product/cap-inside.jpg" data-number="04"><img src="assets/product/cap-inside.jpg" alt="Cap inside" /></button>
+          </div>
+        </div>
+
+        <div class="product-info">
+          <p class="eyebrow">ZERO_CRAFTLABB / 001</p>
+          <h3>THE BATMAN CAP</h3>
+          <p class="product-subtitle">LIMITED EDITION / BLACK</p>
+          <div class="price-row"><span class="price">$50</span><span class="stock-status"><i></i> <span id="stock-label">LIMITED STOCK</span></span></div>
+          <p class="product-description">The silhouette says enough. A clean black cap inspired by the symbol that never needed an introduction.</p>
+
+          <div class="feature-list">
+            <div><span>01</span><strong>ICONIC SILHOUETTE</strong><small>Batman-inspired ear design.</small></div>
+            <div><span>02</span><strong>EVERYDAY FIT</strong><small>Adjustable back strap.</small></div>
+            <div><span>03</span><strong>LIMITED DROP</strong><small>Drop 001 will not stay forever.</small></div>
+          </div>
+
+          <div class="quantity-row">
+            <label for="quantity">QUANTITY</label>
+            <div class="quantity-control">
+              <button id="minus-qty" type="button">−</button>
+              <span id="quantity">1</span>
+              <button id="plus-qty" type="button">+</button>
+            </div>
+          </div>
+
+          <button id="open-checkout" class="button button-dark button-full">BUY THE DROP <span>↗</span></button>
+          <p class="secure-note">SECURE ONLINE CHECKOUT / INTERNATIONAL CARDS</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story-section">
+      <div class="story-copy section-pad">
+        <p class="eyebrow">02 / THE IDEA</p>
+        <h2>NOT A COSTUME.<br /><em>A SIGNAL.</em></h2>
+        <p>Some things are made to be noticed. Others are made to be remembered. Drop 001 was created somewhere in between.</p>
+        <p>Minimal. Dark. A little different. The kind of piece that becomes part of your identity without asking for attention.</p>
+      </div>
+      <div class="story-visual">
+        <div class="bat-symbol">⌁</div>
+        <span>ZERO / 001</span>
+      </div>
+    </section>
+
+    <section class="model-section section-pad">
+      <div class="model-section-heading">
+        <p class="eyebrow">03 / SEE THE FORM</p>
+        <h2>BUILT FOR<br /><em>EVERY ANGLE.</em></h2>
+        <p>Drag the model. Look closer.</p>
+      </div>
+      <div id="product-model" class="large-model-stage"></div>
+    </section>
+
+    <section id="drop" class="drop-section section-pad">
+      <div class="drop-number">001</div>
+      <div class="drop-content">
+        <p class="eyebrow">THE FIRST DROP</p>
+        <h2>NOT EVERYONE<br /><em>WILL GET ONE.</em></h2>
+        <p>Drop 001 is intentionally limited. When the stock is gone, the night goes quiet.</p>
+        <div class="stock-bar"><span id="stock-bar-fill"></span></div>
+        <p class="stock-copy"><strong id="stock-count">50</strong> CAPS REMAINING</p>
+        <button id="open-checkout-2" class="button button-light">CLAIM YOUR CAP <span>↗</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">ZERO<span>_</span>CRAFTLABB</div>
+    <div class="footer-copy">MADE FOR THE ONES WHO MOVE DIFFERENTLY.</div>
+    <div class="footer-links"><a href="#product">PRODUCT</a><a href="#story">STORY</a><a href="#drop">DROP 001</a></div>
+    <div class="footer-bottom">© 2026 ZERO_CRAFTLABB <span>ONLINE ONLY / DROP 001</span></div>
+  </footer>
+
+  <div id="checkout-modal" class="modal hidden">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="checkout-card">
+      <button class="modal-close" data-close-modal>×</button>
+      <p class="eyebrow">DROP 001 / CHECKOUT</p>
+      <h2>CLAIM<br /><em>YOUR CAP.</em></h2>
+      <div class="checkout-summary">
+        <span>THE BATMAN CAP × <b id="summary-quantity">1</b></span>
+        <strong id="summary-total">$50</strong>
+      </div>
+      <form id="checkout-form">
+        <label>FULL NAME<input name="name" required placeholder="Your name" /></label>
+        <label>EMAIL<input name="email" type="email" required placeholder="you@email.com" /></label>
+        <label>PHONE<input name="phone" required placeholder="+1..." /></label>
+        <label>SHIPPING ADDRESS<textarea name="address" required placeholder="Full shipping address"></textarea></label>
+        <button class="button button-dark button-full" type="submit" id="pay-button">CONTINUE TO PAYMENT <span>↗</span></button>
+        <p class="form-note">You will be redirected to secure Razorpay Checkout.</p>
+      </form>
+      <div id="checkout-message" class="checkout-message"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

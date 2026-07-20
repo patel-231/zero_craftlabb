@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZERO_CRAFTLABB / ADMIN</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <main class="admin-shell">
+    <div class="admin-header">
+      <div><p>ZERO_CRAFTLABB</p><h1>DROP 001 / ORDERS</h1></div>
+      <button id="logout">LOGOUT</button>
+    </div>
+    <section id="login-section" class="panel login-panel">
+      <h2>ADMIN LOGIN</h2>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input type="password" id="login-password" placeholder="Password" required />
+        <button>LOGIN</button>
+      </form>
+      <p id="login-message"></p>
+    </section>
+    <section id="dashboard" class="hidden">
+      <div class="stats">
+        <div><small>STOCK</small><strong id="admin-stock">—</strong></div>
+        <div><small>PAID ORDERS</small><strong id="paid-orders">—</strong></div>
+        <div><small>REVENUE</small><strong id="revenue">$—</strong></div>
+      </div>
+      <section class="panel">
+        <div class="table-head"><h2>ORDERS</h2><span id="admin-email"></span></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ORDER</th><th>CUSTOMER</th><th>QTY</th><th>AMOUNT</th><th>STATUS</th><th>DATE</th></tr></thead>
+            <tbody id="orders-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
